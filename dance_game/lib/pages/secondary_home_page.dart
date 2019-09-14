@@ -20,7 +20,7 @@ class SecondaryHomePage extends StatelessWidget {
       body: Column(
         children: <Widget>[
           Expanded(
-            flex: 4,
+            flex: 1,
             child: Stack(
               children: <Widget>[
                 Image.asset(
@@ -112,7 +112,7 @@ class SecondaryHomePage extends StatelessWidget {
             ),
           ),
           Expanded(
-            flex: 3,
+            flex: 2,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
@@ -122,12 +122,15 @@ class SecondaryHomePage extends StatelessWidget {
                 ),
                 Expanded(
                   child: SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    child: Row(
+                    scrollDirection: Axis.vertical,
+                    child: Column(
                       children: <Widget>[
                         for (var i = 0; i < popularWithFriends.length; i++)
                           PopularWithFriendsWidget(
                             imagePath: popularWithFriends[i],
+                            name: tipo[i],
+                            subName: subTipo[i],
+
                           ),
                       ],
                     ),
@@ -136,73 +139,7 @@ class SecondaryHomePage extends StatelessWidget {
               ],
             ),
           ),
-          Expanded(
-            flex: 3,
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 16),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  ContentHeadingWidget(heading: "Continue playing"),
-                  Expanded(
-                    child: Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 16),
-                      height: screenHeight * 0.20,
-                      decoration: BoxDecoration(
-                        gradient: appGradient,
-                        borderRadius: BorderRadius.all(Radius.circular(10)),
-                      ),
-                      child: Row(
-                        children: <Widget>[
-                          Stack(
-                            children: <Widget>[
-                              ClipRRect(
-                                borderRadius: BorderRadius.all(Radius.circular(8)),
-                                child: Image.asset(
-                                  lastPlayedGames[0].imagePath,
-                                  height: screenHeight * 0.13,
-                                  width: 80,
-                                  fit: BoxFit.cover,
-                                ),
-                              ),
-                              Positioned(
-                                left: 25,
-                                right: 25,
-                                top: 0,
-                                bottom: 0,
-                                child: Container(
-                                  decoration: BoxDecoration(
-                                    shape: BoxShape.circle,
-                                    color: Colors.white,
-                                  ),
-                                  child: Icon(
-                                    Icons.play_arrow,
-                                    color: Colors.red,
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 12),
-                            child: RichText(
-                              text: TextSpan(
-                                children: [
-                                  TextSpan(text: lastPlayedGames[0].name, style: headingTwoTextStyle.copyWith(color: Colors.white, fontSize: 16)),
-                                  TextSpan(text: '\n'),
-                                  TextSpan(text: "${lastPlayedGames[0].hoursPlayed} hours played", style: bodyTextStyle.copyWith(color: Colors.white, fontSize: 16, height: 1.5),),
-                                ],
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ),
+
         ],
       ),
     );

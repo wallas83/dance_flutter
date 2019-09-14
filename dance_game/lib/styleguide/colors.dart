@@ -8,5 +8,11 @@ Color tertiaryTextColor = Color(0XFFA7A7A7);
 Color logoTintColor = Color(0XFFFCE3E0);
 Color opacityColor = Colors.white.withOpacity(0.9);
 
+Color firstBack = Color(0xFF303F9F);
+
+Color secondBack = Color(0xFF6A1B9A);
+
 
 LinearGradient appGradient = LinearGradient(colors: [firstColor, secondColor]);
+
+LinearGradient backGradient = LinearGradient(colors: [firstBack, secondBack]);

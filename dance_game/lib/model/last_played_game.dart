@@ -20,3 +20,12 @@ final lastPlayedGames = [
 final popularWithFriends = [
   game_fortnite, game_apex, game_pubg
 ];
+
+final tipo =[
+  "waka waka", "caporal","cueca"
+];
+
+final subTipo =[
+  "0.20", "0.80","0.95"
+];
+
