@@ -1,0 +1,47 @@
+{
+  "nameApp" : "Folklutter",
+  "dances" : [
+    {
+      "ruta" : "detail",
+      "anim" : "assets/flare/cueca_hombre.flr",
+      "animCard" : "Espera",
+      "texto": "Cueca Paceña",
+      "color" : "0xFF862133"
+    },
+    {
+      "ruta" : "detail",
+      "anim" : "assets/flare/corazon.flr",
+      "animCard" : "latidos",
+      "texto": "Diablada",
+      "color" : "0xFFF4511E"
+    },
+    {
+      "ruta" : "detail",
+      "anim" : "assets/flare/cueca_hombre.flr",
+      "animCard" : "Espera",
+      "texto": "Tinku",
+      "color" : "0xFFFFEA00"
+    },
+    {
+      "ruta" : "detail",
+      "anim" : "assets/flare/corazon.flr",
+      "animCard" : "latidos",
+      "texto": "Macheteros",
+      "color" : "0xFFAEEA00"
+    },
+    {
+      "ruta" : "detail",
+      "anim" : "assets/flare/cueca_hombre.flr",
+      "animCard" : "Espera",
+      "texto": "Kullawada",
+      "color" : "0xFF00ACC1"
+    },
+    {
+      "ruta" : "detail",
+      "anim" : "assets/flare/corazon.flr",
+      "animCard" : "latidos",
+      "texto": "Morenada",
+      "color" : "0xFF2196F3"
+    }
+  ]
+}

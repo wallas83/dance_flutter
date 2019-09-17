@@ -14,3 +14,8 @@ const String game_sekiro = "assets/games/sekiro.png";
 const String game_fortnite = "assets/games/fortnite.jpg";
 const String game_apex = "assets/games/apex_legends.jpg";
 const String game_pubg = "assets/games/pubg.png";
+
+
+// flare
+
+const String banner_flare = "assets/flare/banner.flr";

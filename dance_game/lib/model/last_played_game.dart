@@ -29,3 +29,6 @@ final subTipo =[
   "0.20", "0.80","0.95"
 ];
 
+final popularAnimation = [
+  banner_flare,banner_flare,banner_flare
+];

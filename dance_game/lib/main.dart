@@ -1,5 +1,6 @@
 
-import 'package:dance_game/pages/secondary_home_page.dart';
+import 'package:dance_game/pages/home_page.dart';
+import 'package:dance_game/routes/routes.dart';
 import 'package:flutter/material.dart';
 
 
@@ -9,13 +10,20 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Google stadia App concept',
+      title: 'Folklore App',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-          canvasColor: Colors.white,
-          primaryColor: Colors.blue,
-          fontFamily: 'Oxygen'),
-      home: SecondaryHomePage(),
+          primarySwatch: Colors.green,
+          fontFamily: 'BubblegumSans'
+    ),
+    initialRoute: '/',
+    routes: getApplicationRoutes(),
+    onGenerateRoute: (RouteSettings settings) {
+    return MaterialPageRoute(
+    builder: (BuildContext context) => HomePage());
+
+      }
     );
+
   }
 }

@@ -4,13 +4,13 @@ import 'package:dance_game/common/rounded_image_widget.dart';
 import 'package:dance_game/image_asset.dart';
 import 'package:dance_game/model/friends.dart';
 import 'package:dance_game/model/last_played_game.dart';
-import 'package:dance_game/pages/secondary_home_page.dart';
+import 'package:dance_game/pages/home_page.dart';
 import 'package:dance_game/styleguide/colors.dart';
 import 'package:dance_game/styleguide/text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class LandingPage extends StatelessWidget {
+class DetailGamePerfil extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final screenHeight = MediaQuery.of(context).size.height;
@@ -49,7 +49,8 @@ class LandingPage extends StatelessWidget {
                       InkWell(
                         child: Icon(Icons.arrow_forward, color: primaryTextColor),
                         onTap: () {
-                          Navigator.pop(context);},
+                         Navigator.pop(context);
+                         },
                       ),
 
                     ],

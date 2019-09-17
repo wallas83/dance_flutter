@@ -16,3 +16,10 @@ Color secondBack = Color(0xFF6A1B9A);
 LinearGradient appGradient = LinearGradient(colors: [firstColor, secondColor]);
 
 LinearGradient backGradient = LinearGradient(colors: [firstBack, secondBack]);
+
+  const baseColors = <Color>[
+  Colors.teal,
+  Colors.orange,
+  Colors.pinkAccent,
+
+];

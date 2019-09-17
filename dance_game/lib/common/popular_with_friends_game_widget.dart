@@ -1,6 +1,8 @@
 
-import 'package:dance_game/pages/detail_game.dart';
-import 'package:dance_game/pages/landing_page.dart';
+import 'package:dance_game/pages/detail_game_page.dart';
+import 'package:dance_game/pages/perfil_page.dart';
+import 'package:dance_game/styleguide/colors.dart';
+import 'package:flare_flutter/flare_actor.dart';
 import 'package:flutter/material.dart';
 
 import 'game_process_widget.dart';
@@ -9,10 +11,11 @@ class PopularWithFriendsWidget extends StatelessWidget {
   final String imagePath;
   final String name;
   final String subName;
+  final Color  backgroundColor;
 
 
 
-  const PopularWithFriendsWidget({Key key, @required this.imagePath, this.name, this.subName})
+  const PopularWithFriendsWidget({Key key, @required this.imagePath, this.name, this.subName, this.backgroundColor})
       : super(key: key);
 
   @override
@@ -25,16 +28,22 @@ class PopularWithFriendsWidget extends StatelessWidget {
           child: Stack(
             children: <Widget>[
                Container(
+                 color:backgroundColor ,
                   height: 180.0,
                   width: 340.0,
-                  child: Image.asset(imagePath, fit: BoxFit.fitWidth),
-                ),
+                  child:
+                  //Image.asset(imagePath, fit: BoxFit.fitWidth),
+                  FlareActor(
+                    imagePath ,
+                    animation: "Cargando",
+                    fit: BoxFit.fitHeight,
+                  ),
+               ),
 
               Positioned(
                 left: 10.0,
                 bottom: 10.0,
                 child: Column(
-
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     Text(
@@ -58,7 +67,7 @@ class PopularWithFriendsWidget extends StatelessWidget {
             ],
           ),
           onTap: ()=>{
-          Navigator.push(context, MaterialPageRoute(builder: (context) => DetailGame()))
+        //  Navigator.push(context, MaterialPageRoute(builder: (context) => DetailGame()))
           },
         ),
       ),
